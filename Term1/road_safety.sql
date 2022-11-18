@@ -19,7 +19,7 @@ show variables like "secure_file_priv";
 SET GLOBAL local_infile= 'on';
 show variables like "local_infile";
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\Admin\\Desktop\\DE1\\Term1\\Vehicles.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\Admin\\Desktop\\DE1\\Term_1\\Vehicles.csv'
 INTO TABLE vehicles
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -44,7 +44,7 @@ show variables like "secure_file_priv";
 SET GLOBAL local_infile= 'on';
 show variables like "local_infile";
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\Admin\\Desktop\\DE1\\Term1\\Accidents.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\Admin\\Desktop\\DE1\\Term_1\\Accidents.csv'
 INTO TABLE accident
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -67,7 +67,7 @@ show variables like "secure_file_priv";
 SET GLOBAL local_infile= 'on';
 show variables like "local_infile";
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\Admin\\Desktop\\DE1\\Term1\\vehicle_types.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\Admin\\Desktop\\DE1\\Term_1\\vehicle_types.csv'
 INTO TABLE vehicle_types
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
