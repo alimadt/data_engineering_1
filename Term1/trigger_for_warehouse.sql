@@ -31,7 +31,7 @@ BEGIN
     weather_types.weather_type AS 'Weather'
 
 	FROM accident
-	INNER JOIN vehicles using(accident_index)
+	INNER JOIN vehicles ON accident.accident_index = vehicles.accident_index
 	INNER JOIN vehicle_types ON vehicles.vehicle_type = vehicle_types.vehicle_code
     INNER JOIN weather_types ON accident.weather = weather_types.weather_code;
         
