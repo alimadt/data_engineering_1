@@ -1,8 +1,8 @@
 # DE1 Term1: Road Safety in the United Kingdom in 2015
 The dataset was derived from The UK Department of Transport [(link)](https://data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data).
 ## Operational layer
-The data has records on 140056 accidents in the United Kingdom for 2015. The dataset contains two tables: *Accidents* and *Vehicles*. The following 3 variables were chosen from *Accidents.csv* for the analysis: accident_index, accident_severity, day_of_the_week, weather; and 6 variables from *Vehicles.csv*: accident_index, vehicle_type, left_hand, gender_of_driver, age_of_driver, age_vehicle.
-Additionally, *vehicle_types.csv* and *weather_types.csv* were created with the help of *Road-Accident-Safety-Data-Guide* for the future matching of the actual categories with their numerical values in the *accident* and *vehicle* tables.
+The data has records on 140056 accidents in the United Kingdom for 2015 (all the data files can be found [here](https://github.com/alimadt/data_engineering_1/blob/master/Term1/data.zip)). The dataset contains two tables: *Accidents* and *Vehicles*. The following 3 variables were chosen from *Accidents.csv* for the analysis: accident_index, accident_severity, day_of_the_week, weather; and 6 variables from *Vehicles.csv*: accident_index, vehicle_type, left_hand, gender_of_driver, age_of_driver, age_vehicle.
+Additionally, *vehicle_types.csv* and *weather_types.csv* were created with the help of *Road-Accident-Safety-Data-Guide* for the future matching of the actual categories with their numerical values in the *accident* and *vehicle* tables (Operational layer can be found [here](https://github.com/alimadt/data_engineering_1/blob/master/Term1/road_safety.sql)).
 The EER diagram demonstrates the relationship between 4 tables (accident, vehicles, vehicle_types, weather_types).
 
 ![EER](https://github.com/alimadt/data_engineering_1/blob/master/Term1/eer.png)
@@ -15,7 +15,7 @@ The EER diagram demonstrates the relationship between 4 tables (accident, vehicl
 ![Plan](https://github.com/alimadt/data_engineering_1/blob/master/Term1/analytical_layer.png)
 
 ## Analytical layer
-
+*accident_analysis* data warehouse were created for the analytical layer [(link)](https://github.com/alimadt/data_engineering_1/blob/master/Term1/data_warehouse.sql). It includes 4 dimensions: Accident, Vehicles, Vehicle types and Weather types.
 ![](https://github.com/alimadt/data_engineering_1/blob/master/Term1/accident_analysis.png)
 
 ## Data marts
@@ -61,7 +61,7 @@ As the category 'Car' was the one with the most records the View 6 which aims to
 
 ![](https://github.com/alimadt/data_engineering_1/blob/master/Term1/pictures%20for%20views/view6.png)
 
-73% of cases involved cars which were under 25 years, moreover, the average severity of accidents is also rather high.
+73% of cases involved cars which were under 20 years, moreover, the average severity of accidents is also rather high.
 
 ### View 7: Average severity by weather conditions.
 This view was generated, as weather conditions can be a strong driver for the higher possibility of severe road accident.
